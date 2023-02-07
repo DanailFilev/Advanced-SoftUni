@@ -7,10 +7,13 @@ namespace ReverseStrings
     {
         static void Main(string[] args)
         {
-            Stack<char> strToReverse = new Stack<char>(Console.ReadLine().ToCharArray());
-            while (strToReverse.Count > 0)
+            var input = Console.ReadLine();
+
+            var stack = new Stack<char>(input);
+
+            while (stack.Any())
             {
-                Console.Write(strToReverse.Pop());
+                Console.Write(stack.Pop());
             }
         }
     }
